@@ -45,3 +45,36 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
+// Contact form JS
+function addClass() {
+    document.body.classList.add("sent");
+  }
+  
+  sendLetter.addEventListener("click", addClass);
+
+
+
+
+
+//  Initialize Swiper
+@importScripts
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: false,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
