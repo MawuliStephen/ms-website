@@ -141,8 +141,6 @@ body {
   position: relative;
   border:0.001px solid #ccc;
   /* border-radius: 100%; */
-  -webkit-mask-image:"";
-  mask-image:url(./src/mawuli.png);
   
 }
 
