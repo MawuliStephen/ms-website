@@ -177,16 +177,14 @@ button {
 
 .btn {
   display: inline-block;
-  /* background:  #2f2f2f; */
-  background-color: #ADEFD1FF;
+  background:  #2f2f2f;
+  /* background-color: #ADEFD1FF; */
   /* background: transparent; */
-  color: #00203FFF;
-  /* padding: 10px 50px; */
-  width: 200px;
-  height: 50px;
-  margin: 30px 0;
-  border-radius: 20px;
-  /* transition: background 0.5s; */
+  color: #FFFF;
+  padding: 10px 25px;
+  margin: 30px 10;
+  border-radius: 10px;
+  transition: background 0.5s;
 }
 
 .btn_secondary {
@@ -194,9 +192,9 @@ button {
   outline: solid 0.5px #555555;
   border: solid 0.5px #555555;
   color: #000000;
-  padding: 10px 30px;
+  padding: 10px 100px;
   margin: 0px 0;
-  border-radius: 25px;
+  border-radius: 50px;
 }
 
 .btn_secondary:hover {
@@ -211,7 +209,6 @@ button {
 
 /* Wrappers */
 .center-content {
-  /* font-style: Quicksand; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,18 +232,50 @@ button {
   padding: 25px;
 }
 
-.main {
+
+#blog_section {
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 140px;
+  padding: 25px;
+  /* margin: auto; */
+  background-color: white;
+  
+}
+
+#blog_post{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* max-width: 70%; */
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.fh5co-blog a img {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 300px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
 }
 
 
-/* .wrapper {
-  width: 100%;
-  padding-top: 20px;
-  text-align: center;
-} */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 140px;
+  /* margin: 200px; */
+  max-width: 1500px;
+}
 
 
 h2 {
@@ -260,19 +289,19 @@ h2 {
   line-height:30px; */
 }
 
-
+/* 
 #image_frame {
   display: flex;
   flex-basis: 25%;
   max-width: 50%;
   max-height: 40%;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   display: inline-flex;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 
-}
+} */
 
 .item_colum {
   box-sizing: border-box;
@@ -418,6 +447,12 @@ h4 {
   border-left: 1px solid #ccc;
 }
 
+#blog_post{
+ width: 100%;
+ flex-direction: column;
+
+}
+
 .card-content .author {
   border-top: 1px solid #cdcdcd;
   font-weight: 700;
@@ -461,7 +496,7 @@ h4 {
 .center-content {
 
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
   /* align-items: center; */
   /* margin-top: 20px; */
