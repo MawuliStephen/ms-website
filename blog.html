@@ -22,39 +22,10 @@
 
 <body>
     <header class="header" id="header">
-        <nav class="navbar">
-            <div>
-                <!-- <h1>{{ "Mawuli <br> Stephen"  }}</h1> -->
-                <a href="#" class="brand">Mawuli <br> Stephen</a>
-            </div>
-            <div>
-                <!-- Trigger/Open The Modal -->
-                <button id="myBtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content ">
-                        <ul class="nav__ul modal-content-list">
-
-                            <span class="close">&times;</span>
-
-                            <li><a href="./main.html">Home</a></li>
-
-                            <li> <a href="#"> About Me</a></li>
-
-
-                            <li><a href="./blog.html">Blog</a></li>
-
-                            <li><a href="#">contact Me</a></li>
-
-                            <li><a href="#">Follow me</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
+        {% include nav.html %}
+        <div>
     </header>
+
 
     <br>
     <div class="main">
@@ -71,13 +42,13 @@
 
 
         <div id="blog_section">
-            <!-- <div class="center-content">
+            <div class="center-content">
                 <div style="text-align: center;">
                     <h2>Read my Blog</h2>
                     <p>Enjoy this space while time is on your side. I hopefull you will come back<br>
                         for more </p>
                 </div>
-            </div> -->
+            </div>
 
             <br>
 
@@ -92,8 +63,8 @@
                 </div>
 
                 <div id="News" class="tabcontent">
-                    <!-- <h3>News</h3>
-                    <p>Some news this fine day!</p> -->
+                    <h3>News</h3>
+                    <p>Some news this fine day!</p>
                 </div>
 
                 <div id="Poetry" class="tabcontent">
@@ -183,8 +154,6 @@
                 </div>
             </div> <br>
         </div>
-
-
     </div>
 
 
