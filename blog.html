@@ -22,8 +22,45 @@
 
 <body>
     <header class="header" id="header">
-        {% include nav.html %}
-        <div>
+        <nav class="navbar">
+
+            <div>
+                <a href="#" class="brand">
+                    <div class="logo" id="logo">
+                        {% include logo.html %}
+                    </div>
+                </a>
+            </div>
+
+            <div style="display:flex;justify-content: space-evenly;">
+                {%include tab.html%}
+            </div>
+
+            <div>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content ">
+                        <ul class="nav__ul modal-content-list">
+
+                            <span class="close">&times;</span>
+
+                            <li><a href="./main.html">Home</a></li>
+
+                            <li> <a href="#"> About Me</a></li>
+
+                            <li><a href="./blog.html">Blog</a></li>
+
+                            <li><a href="#exit">contact Me</a></li>
+
+                            <li><a href="#">Follow me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
 
@@ -42,63 +79,58 @@
 
 
         <div id="blog_section">
-            <div class="center-content">
+            <!-- <div class="center-content">
                 <div style="text-align: center;">
                     <h2>Read my Blog</h2>
                     <p>Enjoy this space while time is on your side. I hopefull you will come back<br>
                         for more </p>
                 </div>
+            </div> -->
+
+
+            <div id="Home" class="tabcontent">
+                <h3>All</h3>
+                <div class="row">
+                    {% include allpost.html %}
+                </div>
             </div>
 
-            <br>
-
-            <div class="lan">
-                <div id="Home" class="tabcontent">
-                    <h3>All</h3>
-                    <p>Home is where the heart is..</p>
-                    <div class="row">
-                        {% include allpost.html %}
-                    </div>
-
-                </div>
-
-                <div id="News" class="tabcontent">
-                    <h3>News</h3>
-                    <p>Some news this fine day!</p>
-                </div>
-
-                <div id="Poetry" class="tabcontent">
-                    <h3>Poetry</h3>
-                    {% include poetry.html %}
-                </div>
-
-                <div id="Marketing" class="tabcontent">
-                    <h3>About</h3>
-                    <p>Who we are and what we do.</p>
-                    {% include marketing.html %}
-                </div>
-
-                <div id="News" class="tabcontent">
-                    <h3>Recent posts</h3>
-                    <p>Who we are and what we do.</p>
+            <div id="News" class="tabcontent">
+                <h3>News</h3>
+                <div class="row">
                     {% include recent.html %}
                 </div>
-
             </div>
 
-            <div id="myBtnContainer" class="container">
+            <div id="Poetry" class="tabcontent">
+                <h3>Poetry</h3>
+                {% include poetry.html %}
+            </div>
+
+            <div id="Marketing" class="tabcontent">
+                <h3>About</h3>
+                <div class="row">
+                    {% include allpost.html %}
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- <div id="myBtnContainer" class="container">
                 <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                 <button class="btn" onclick="filterSelection('nature')"> Nature</button>
                 <button class="btn" onclick="filterSelection('cars')"> Cars</button>
                 <button class="btn" onclick="filterSelection('people')"> People</button>
-            </div>
+            </div> -->
 
-            <br>
+        <br>
 
-            <div class="background_color">
-                <div class="container">
-                    <!-- Portfolio Gallery Grid -->
-                    <div class="row">
+        <div class="background_color">
+            <div class="container">
+                <!-- Portfolio Gallery Grid -->
+                <!-- <div class="row">
                         <div class="column nature">
                             <div class="content">
                                 <img src="./src/" alt="Mountains">
@@ -149,11 +181,11 @@
                             </div>
                         </div>
 
-                    </div>
-                    <!-- END GRID -->
-                </div>
-            </div> <br>
-        </div>
+                    </div> -->
+                <!-- END GRID -->
+            </div>
+        </div> <br>
+    </div>
     </div>
 
 
