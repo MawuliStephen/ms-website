@@ -394,10 +394,10 @@ section{
 
 /* categories */
 /* Content */
-.content {
-  /* background-color: white; */
+/* .content {
+  background-color: white;
   padding: 10px;
-}
+} */
 
 /* The "show" class is added to the filtered elements */
 .show {
@@ -897,7 +897,7 @@ padding: 4px;
     padding: 0 10px;
   }
 
-  .menu {
+  /* .menu {
     position: relative;
     top: 0;
     right: 0;
@@ -907,7 +907,7 @@ padding: 4px;
     height: auto;
     background: none;
     box-shadow: none;
-  }
+  } */
   /* The Modal (background) */
   .modal {
     display: none;
