@@ -1,0 +1,122 @@
+.leftNav {
+    width: 100%;
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 300px;
+    /* padding-left: 25px; */
+    padding-top: 25px;
+    background: #ccc;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Sidebar Menu */
+/* .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+} */
+
+.menu {
+    /* padding: 20px 0; */
+    margin-left: 25px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #ebebeb;
+    padding-left: 0px;
+    /* width: 250px; */
+}
+
+.dashb-content {
+    width: calc(100% - 300px);
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+}
+
+header {
+    /* background: #000; */
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header i.fa-bars {
+    /* color: #fff; */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.header-logo {
+    font-size: 30px;
+    font-weight: bold;
+    /* color: #fff; */
+    margin-left: 30px;
+}
+
+.leftNav.close .sidebar {
+    width: 0px;
+}
+
+.leftNav.close .dashb-content {
+    width: 100%;
+}
+
+/* .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;    
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+} */
+
+/* .tablink:hover {
+    background-color: #777;
+} */
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 25px;
+    height: 100%;
+    padding: 30px 25px;
+    /* border-radius: 20px; */
+}
+
+#Dashboard {
+    background-color: red;
+  
+}
+
+#Post {
+    background-color: green;
+}
+
+#Pages {
+    background-color: blue;
+}
+
+#Settings {
+    background-color: orange;
+}
+
+textarea {
+    background-color: white;
+    color:white;
+}
+
+.nicEdit-main{
+    background-color: white;
+    color: black;
+    outline:solid 1px black;
+}
