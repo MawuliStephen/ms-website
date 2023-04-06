@@ -15,12 +15,12 @@ var closeModal = document.getElementsByClassName("close")[0];
 // JavaScript statement menu
 
 menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        menuLinks.forEach((link) => {
-            link.classList.remove("is-active");
-        });
-        link.classList.add("is-active");
+  link.addEventListener("click", () => {
+    menuLinks.forEach((link) => {
+      link.classList.remove("is-active");
     });
+    link.classList.add("is-active");
+  });
 });
 
 
@@ -30,17 +30,17 @@ menuLinks.forEach((link) => {
 
 // When user clicks button, open Modal
 modalBtn.onclick = function () {
-    modal.style.display = "block";
-    
+  modal.style.display = "block";
+
 };
 
 closeModal.onclick = function () {
-    modal.style.display = "none";
+  modal.style.display = "none";
 
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -50,13 +50,10 @@ window.onclick = function(event) {
 
 // Contact form JS
 function addClass() {
-    document.body.classList.add("sent");
-  }
-  
-  sendLetter.addEventListener("click", addClass);
+  document.body.classList.add("sent");
+}
 
-
-
+// sendLetter.addEventListener("click", addClass);
 
 //   categories
 
@@ -101,7 +98,7 @@ function w3RemoveClass(element, name) {
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
+  btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
