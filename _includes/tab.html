@@ -1,6 +1,19 @@
 <section style="flex-direction: row; justify-content: center;   margin-top:0px;">
-    <button class="tablink tab_btn" onclick="openPage('Home', this, 'red')"id="defaultOpen">Home</button>
-    <button class="tablink tab_btn" onclick="openPage('News', this, 'green')">News</button>
+    <button class="tablink tab_btn"  onclick="openPage('Home', this, 'red')"id="defaultOpen">Home</button>
+    <button class="tablink tab_btn"  onclick="openPage('News', this, 'green')">News</button>
     <button class="tablink tab_btn" onclick="openPage('Poetry', this, 'blue')">Poetry</button>
     <button class="tablink tab_btn" onclick="openPage('Marketing', this, 'orange')">Marketing</button>
   </section>
+
+
+  <script>
+    const postCategory = [
+      {name: "green", category: "News"},
+      {name: "blue" ,category: "Poetry"},
+      {name: "orange", category: "Marketing"},
+    ]
+
+    postCategory.filter(postCategory => postCategory.category);
+
+    console.log(postCategory);
+  </script>

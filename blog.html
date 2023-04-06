@@ -101,7 +101,8 @@
             <div id="Marketing" class="tabcontent">
                 <h3>About</h3>
                 <div class="row">
-                    {% include allpost.html %}
+                    <h3>About</h3>
+                    {% include marketing.html %}
                 </div>
             </div>
 
@@ -184,7 +185,7 @@
 
     <!-- Recent post -->
     <div class="container" id="blog_post">
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4" id="blogCard">
             <div class="fh5co-blog">
                 <a href="#"><img class="img-responsive" src="./src/backimg.jpg" alt=""></a>
                 <div class="image-popup" href="#">
@@ -193,10 +194,10 @@
                         <span class="posted_by">Posted by: Admin</span>
                         <span class="comment"><a href="">21<i class="icon-bubble22"></i></a></span>
                         <span class="post_date">21 March 2023</span>
-                        <p>Fellow country men and women.
+                        <p class="post">Fellow country men and women.
                             Our motherland, Ghana is 66 years old after obtaining independence from foreign
                             direct rule. .</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="#" class="btn btn-primary" id="readMore">Read More</a>
                     </div>
                 </div>
             </div>
@@ -245,7 +246,7 @@
 
     <br>
     <!-- old posts -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="fh5co-blog animate-box">
@@ -284,7 +285,7 @@
 
         </div>
     </div>
-    <br>
+    <br> -->
 
     <div class="footer">
         {% include footer.html %}

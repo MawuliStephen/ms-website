@@ -70,10 +70,11 @@ body {
   /* border-bottom:5px solid #6b4; */
 }
 
-.logo{
+/* #logo{
    height: 50px;
    width: 50px;
-}
+   margin-left: 40px;
+} */
 #logo{
   height: 45px;
   width: 45px;
@@ -128,15 +129,15 @@ border: 100p;}
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+  /* color: #aaaaaa; */
+  /* float: right; */
+  /* font-size: 28px; */
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color:red;
+  /* color:red; */
   text-decoration: none;
   cursor: pointer;
 }
@@ -171,7 +172,6 @@ border: 100p;}
 } */
 
 /* buttons */
-
 a,
 button {
   font-family: inherit;
@@ -196,14 +196,23 @@ button {
   /* transition: background 0.5s; */
 }
 
-.btn_secondary {
+.btn2 {
   display: inline-block;
   outline: solid 0.5px #555555;
   border: solid 0.5px #555555;
   color: #000000;
-  padding: 10px 100px;
-  margin: 0px 0;
-  border-radius: 50px;
+  padding: 10px 25px;
+   margin: 30px 10;
+  border-radius: 10px;
+}
+
+select{
+  height:50px;
+  padding-left: 10px;
+  padding-right: 30px;
+  /* margin: 20px; */
+  cursor: pointer;
+
 }
 
 /* .btn_secondary:hover {
@@ -240,7 +249,6 @@ button {
   justify-content: space-between;
   padding: 25px;
 }
-
 
 #blog_section {
   flex-direction: column;
@@ -392,27 +400,6 @@ section{
 } */
 
 
-/* categories */
-/* Content */
-/* .content {
-  background-color: white;
-  padding: 10px;
-} */
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-
 
 
 
@@ -425,7 +412,7 @@ section{
   box-shadow: 2px 2px 5px #9e9e9e, -1px -1px 5px #9e9e9e;
   border-radius: 3px;
   display: grid;
-  /* grid-template-column: repeat(5, 1fr); */
+
 }
 
 .card .img-container {
@@ -466,12 +453,12 @@ h4 {
   .card {
   display: flex;
   flex-direction: column;
-  /* height: 400px; */
+
 }
 
 .card-content {
   grid-column: 3 / 5;
-  /* padding: 10px 30px; */
+  
   padding-top: 0px;
   padding-left: 5px;
   padding-right: 5px;
@@ -487,12 +474,10 @@ h4 {
 .card-content .author {
   border-top: 1px solid #cdcdcd;
   font-weight: 700;
-  /* margin-top: 25px; */
-  /* padding: 25px 0 10px 0; */
   color: #555;
 }
 .card .img-container {
-  /* width: 230px; */
+  
   height: 100%;
   grid-column: 2;
   background-color: #c1b7b4;
@@ -502,15 +487,13 @@ h4 {
 }
 
 .swiper-slide {
-  /* margin:40px;
-  padding: 15px; */
-  
+
   display: flex;
   justify-content: start;
   align-items: center;
 }
 .swiper {
-  /* width: 100%; */
+  
   max-height: 100%;
   margin-bottom: 20px;
 }
@@ -889,13 +872,13 @@ padding: 4px;
 
 
 
-  /* the parent style is on productpage css */
+  /* the parent style is on productpage css
   form input {
     width: 50%;
     height: 30px;
     margin: 10px 0;
     padding: 0 10px;
-  }
+  } */
 
   /* .menu {
     position: relative;
@@ -920,20 +903,26 @@ padding: 4px;
     height: auto;
   }
 
+   /* Modal Content/Box */
+  /* .modal-content{
+    padding: 20px;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  } */
 
-
-  /* Modal Content/Box */
   .modal-content {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-end;
-    margin: auto;
-    /* padding: 25px; */
-    border-radius: 0px 0px 0px 0;
-    width: 100%;
-    height: 6rem;
-    /* align-items: center; */
+    padding: 20px;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
+  
+
+ 
+/* 
   .modal-content-list{
     display: flex;
     flex-direction: row-reverse;
@@ -948,7 +937,7 @@ padding: 4px;
     max-height: 700px;
     justify-content: space-between;
  
-  }
+  } */
 
 
 }
