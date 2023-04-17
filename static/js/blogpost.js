@@ -5,129 +5,124 @@
 // const readMore = document.getElementById("readMore");
 
 
-
-// Create a "close" button and append it to each list item
-// var myNodelist = document.getElementsByTagName("LI");
-// var i;
-// for (i = 0; i < myNodelist.length; i++) {
-//     var span = document.createElement("SPAN");
-//     var txt = document.createTextNode("\u00D7");
-//     span.className = "close";
-//     span.appendChild(txt);
-//     myNodelist[i].appendChild(span);
-// }
-
-// Click on a close button to hide the current list item
-// var close = document.getElementsByClassName("close");
-// var i;
-// for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function () {
-//         var div = this.parentElement;
-//         div.style.display = "none";
-//     }
-// };
+document.querySelector("input").focus();
+console.log(document.activeElement.tagName);
+// → INPUT
+document.querySelector("input").blur();
+console.log(document.activeElement.tagName);
+// → BODY
 
 
-// Add a "checked" symbol when clicking on a list item
-/* var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false); */
 
 
-bkLib.onDomLoaded(function () {
-    var myNicEditor = new nicEditor();
-    myNicEditor.setPanel('myNicPanel');
-    myNicEditor.addInstance('myInstance1');
+
+// const previewPost = document.getElementById("previewPost");
+// const publishPost = document.getElementById("publishPost");
+
+// Preview before publishing Blog post
+ previewPost.addEventListener("click", (e) => {
+
+    var postTitle = document.getElementById("postTitle").value;
+    var textArea = document.getElementById("textarea").value;
+    var postImg = document.getElementById("myFile").value;
+    // const seLect = document.getElementById("seclect");
+
+    let newDiv = document.createElement("myLI").parentElement;
+
+    // let newDiv = document.createElement("div");
+
+    let headLine = document.createElement("h3");
+    let blgPost = document.createElement("p");
+    let postPicture = document.createElement("img");
+    // parentElement.classList.add() = ""
+
+
+    // Create new post div assign class
+    newDiv.className = "fh5co-blog";
+    let mainDiv = document.parentElement;
+
+    mainDiv.appendChild(newDiv);
+
+    headLine.className = "prod-title";
+    headLine.append(postTitle);
+    blgPost.append(textArea);
+
+    // Create a post picture and assign class
+    postPicture.className ="img-responsive"
+    postPicture.append(postImg);
+
+
+    if (postTitle, textArea === "") {
+
+        alert(" You can not preview empty post");
+        // console.log(postTitle, textArea);
+
+    }
+    else {
+        // alert(postTitle, textArea, seLect);
+        console.log(mainDiv, postPicture,headLine,  blgPost,);
+
+    };
+
+
 });
 
 
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-        alert("You cannot publish an empty blog post!");
-    } else {
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
+// Publish before publishing Blog post
 
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
+// publishPost.addEventListener("click", (e) => {
 
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
-}
-
-// Create a new list item when clicking on the "Preview" button
-
-function previewElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-        alert("This is how your post will look like!");
-    } else {
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
-
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
-}
+//     var postTitle = document.getElementById("postTitle").value;
+//     var textArea = document.getElementById("textarea").value;
+//     // const seLect = document.getElementById("seclect");
 
 
+//     let headLine = document.createElement("h3");
+//     let blgPost = document.createElement("p");
+//     // parentElement.classList.add() = ""
+//     headLine.className = "prod-title";
+//     headLine.append(postTitle);
 
+//     blgPost.append(textArea);
 
-// Create a new list item when clicking on the "Preview" button
+//     if (postTitle, textArea === "") {
+//         document.getElementById("myFile").style.outlineColor = "red";
 
-// function previewElement() {
-//     var li = document.createElement("li");
-//     var inputValue = document.getElementById("myInput").value;
-//     var t = document.createTextNode(inputValue);
-//     li.appendChild(t);
-//     if (inputValue === '') {
-//         alert("This is how your post will look like!");
-//     } else {
-//         document.getElementById("myUL").appendChild(li);
+//         alert(" Sorry!  You can not publish an empty blog post.");
+//         // console.log(postTitle, textArea);
+
 //     }
-//     document.getElementById("myInput").value = "";
+//     else {
+//         // postTitle, textArea
+//         // ev.preventDefault();
 
-//     var span = document.createElement("SPAN");
-//     var txt = document.createTextNode("\u00D7");
-//     span.className = "close";
-//     span.appendChild(txt);
-//     li.appendChild(span);
+//         // window.open(console.log(postTitle, textArea));
+//         console.log(headLine, blgPost,);
 
-//     for (i = 0; i < close.length; i++) {
-//         close[i].onclick = function () {
-//             var div = this.parentElement;
-//             div.style.display = "none";
-//         }
-//     }
-// }
+
+//     };
+
+//     // document.getElementById("myInput").value = "";
+
+//     // var span = document.createElement("SPAN");
+//     // var txt = document.createTextNode("\u00D7");
+//     // span.className = "close";
+//     // span.appendChild(txt);
+//     // li.appendChild(span);
+
+//     // for (i = 0; i < close.length; i++) {
+//     //     close[i].onclick = function () {
+//     //         var div = this.parentElement;
+//     //         div.style.display = "none";
+//     //     }
+//     // }
+
+
+
+
+// });
+
+
+
 
 

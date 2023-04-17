@@ -8,7 +8,7 @@ var modal = document.getElementById('myModal');
 const modalBtn = document.getElementById('myBtn');
 
 // Get the <span> element to close Modal
-var closeModal = document.getElementsByClassName("close")[0];
+var closeModal = document.getElementsByClassName("klose");
 
 
 

@@ -1,0 +1,71 @@
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".//static/css/blog.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+</head>
+
+<body>
+    <header class="header" id="header" style="background-color: white;">
+        {% include nav.html %}
+    </header>
+
+    <br><br><br>
+    </div>
+
+
+    <div class="landing_container container" id="blog_section">
+        <div>
+            <button class="btn" id="save-as-Draft">Save As Draft</button>
+            <button class="btn btn-primary" id="Publish">Publish</button>
+        </div>
+        <div class="col-lg-4 col-md-4" id="blogCard">
+            <div class="fh5co-blog">
+                <a href="#"><img class="img-responsive" id="img-responsive" src="" alt=""></a>
+                <div class="image-popup" href="#">
+                    <div class="prod-title">
+                        <h3><a href="" id="main-headline"></a></h3>
+                        <!-- <span class="posted_by">Posted by: Admin</span> -->
+                        <span class="comment"><a href=""><i class="fa fa-comment" aria-hidden="true"></i>201</a></span>
+                        <span class="post_date">12 April 2023</span>
+                        <p class="post" id="main-post"></p>
+                        <a href="#" class="btn btn-primary" id="readMore">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+
+
+        <!-- <div id="blog_section" class=" landing_container container">
+
+    
+        <h1>
+            Result Page
+        </h1>
+        <h2>
+            Name: <span id="result-name">
+        </h2>
+        <h2>
+            Surname: <span id="result-surname">
+        </h2>
+
+
+    </div> -->
+        <script src=".//static/js/main.js"></script>
+        <!-- <script src=".//static/js/blogpost.js"></script> -->
+        <script src=".//static/js/preview.js"></script>
+
+
+</body>
+
+</html>
