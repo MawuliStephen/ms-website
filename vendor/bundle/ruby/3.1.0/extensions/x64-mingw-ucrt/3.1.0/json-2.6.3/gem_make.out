@@ -1,0 +1,16 @@
+current directory: C:/Users/Mawuli/Documents/GitHub/ms-website/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
+C:/Ruby31-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/Mawuli/Documents/GitHub/ms-website/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20230406-7792-1k83ou sitelibdir\=./.gem.20230406-7792-1k83ou clean
+
+current directory: C:/Users/Mawuli/Documents/GitHub/ms-website/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20230406-7792-1k83ou sitelibdir\=./.gem.20230406-7792-1k83ou
+make: Nothing to be done for 'all'.
+
+current directory: C:/Users/Mawuli/Documents/GitHub/ms-website/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20230406-7792-1k83ou sitelibdir\=./.gem.20230406-7792-1k83ou install
+
+current directory: C:/Users/Mawuli/Documents/GitHub/ms-website/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20230406-7792-1k83ou sitelibdir\=./.gem.20230406-7792-1k83ou clean

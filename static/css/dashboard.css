@@ -1,7 +1,9 @@
 .leftNav {
     width: 100%;
     display: flex;
-    overflow-x: fixed;
+    /* overflow-x: fixed; */
+    /* position: fixed; */
+    overscroll-behavior-x:scroll;
 }
 
 .sidebar {
@@ -13,6 +15,9 @@
   /* background-color: #2f2f2f; */
   background-color: #2f2f2f;
   transition: all 0.5s ease-in-out;
+  /* object-position: 10px; */
+
+  /* overscroll-behavior-x:scroll; */
 }
 #dashb-logo{
   height: 50px;
@@ -167,9 +172,17 @@ textarea {
   background-color: #fff !important;
 }
 
+#file{
+  color: transparent;
+}
+
+#postTitle{
+  padding: 10px;
+
+}
 
 
-
+select[type=file],
 select[type=text] {
   width: 100%;
   padding: 25px 20px;
@@ -179,11 +192,25 @@ select[type=text] {
   box-sizing: border-box;
 }
 
+.texTeditor{
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+form{
+  margin-bottom: 20px;
+}
+
 
 textarea {
   color: #2f2f2f;
-  width: 600px;
-  height: 200px;
+  width: 100%;
+  padding: 10px;
+  min-height: 200px;
   background-color: aliceblue;
 }
 
@@ -389,8 +416,8 @@ textarea {
 
   textarea {
     color: #2f2f2f;
-    width: 300px;
-    height: 100px;
+    /* width: 300px; */
+    height: 250px;
     background-color: aliceblue;
 }
 
