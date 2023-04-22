@@ -1,19 +1,8 @@
-// const postImg = document.getElementsByClassName("img-responsive");
-// const postTitle = document.getElementsByClassName("prod-title");
-// const postDate = document.getElementsByClassName("post_date");
-// const blogpost = document.getElementsByClassName("post");
-// const readMore = document.getElementById("readMore");
-
-
-document.querySelector("input").focus();
-console.log(document.activeElement.tagName);
-// → INPUT
-document.querySelector("input").blur();
-console.log(document.activeElement.tagName);
-// → BODY
-
-
-
+const postImg = document.getElementsByClassName("img-responsive");
+const postTitle = document.getElementsByClassName("prod-title");
+const postDate = document.getElementsByClassName("post_date");
+const blogpost = document.getElementsByClassName("post");
+const readMore = document.getElementById("readMore");
 
 
 // const previewPost = document.getElementById("previewPost");

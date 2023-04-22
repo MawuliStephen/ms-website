@@ -5,6 +5,7 @@ window.addEventListener('load', () => {
     // const postImg = params.get('myFile');
     // const postTitle = params.get('postTitle');
     // const textArea = params.get('textArea');
+    // const threeDots = params.get("dots");
 
     // Via local Storage
     // const postImg = localStorage.getItem("POSTIMG");
@@ -15,10 +16,13 @@ window.addEventListener('load', () => {
     const postImg = sessionStorage.getItem("POSTIMG");
     const postTitle  = sessionStorage.getItem('POSTTILE');
     const textArea = sessionStorage.getItem('BLOGPOST');
+    // const threeDots = sessionStorage.getItem("THREEDOTS");
 
     document.getElementById('img-responsive').innerHTML= postImg;
     document.getElementById('main-headline').innerHTML = postTitle;
     document.getElementById('main-post').innerHTML = textArea;
+    // document.getElementById('dots') =  threeDots;
+
 
 });
 
@@ -42,3 +46,4 @@ window.addEventListener('load', () => {
 
 //     return;
 // }
+

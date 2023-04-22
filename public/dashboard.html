@@ -11,9 +11,9 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <link rel="stylesheet" href="./static/css/dashboard.css">
-    <link rel="stylesheet" href="./static/css/main.css">
-    <!-- <link rel="stylesheet" href="./static/css/blog.css"> -->
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <!-- <link rel="stylesheet" href="../static/css/blog.css"> -->
 </head>
 
 
@@ -27,16 +27,17 @@
                 </div>
             </a>
 
-            <ul class="menu ">
-                <li onclick="openPage('Dashboard', this, '')">Dashbard</li>
+            <ul class="menu d-list ">
+                <li class="d-list" onclick="openPage('Dashboard', this, '')">Dashbard</li>
 
-                <li onclick="openPage('Post', this, '')" id="defaultOpen">Post</li>
+                <li class="d-list" onclick="openPage('Post', this, '')" id="defaultOpen">Post</li>
 
-                <li onclick="openPage('Pages', this, '')"> Pages</li>
+                <li class="d-list" onclick="openPage('Pages', this, '')"> Pages</li>
 
-                <li onclick="openPage('Settings', this, '')">Settings</li>
+                <li class="d-list" onclick="openPage('Settings', this, '')">Settings</li>
 
             </ul>
+
             <div class="menu mobilenav">
                 {%include mobilenav.html %}
             </div>
@@ -51,16 +52,17 @@
 
                 <div>
                     <nav class="navbar">
-
-
+                        <li>b</li>
 
                     </nav>
                 </div>
-
             </header>
+
+
+            <!-- header Ends here -->
             <hr style="outline:solid 1px black;">
 
-            <div class="/" id="" style="background-color: #ebebeb;">
+            <div>
                 <div class="container">
                     <div id="Dashboard" class="tabcontent">
                         <h3>All</h3>
@@ -68,59 +70,62 @@
                             {% include adminpannel.html%}
                             <!-- <p> All pages summary here</p> -->
 
-                            <div class="dcards col-12 col-lg-4">
+                            <!-- <div class="dcards col-12 col-lg-4">
                                 <div class="card">
                                     <h5 class="card-header">Traffic last 6 months</h5>
                                     <div class="card-body">
                                         <div id="traffic-chart"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
                     <!-- post page -->
                     <div id="Post" class="tabcontent">
                         <h3>Post</h3>
-
                         <div class="container">
                             <!-- <form action="" method="get"> -->
-                            <form class="texTeditor" id="form" method="GET">
+                            <form class="texTeditor" id="form">
 
-                                <input type="file" id="myFile" name="filename" placeholder="upload picture" multiple>
+                                <div class=" banner">
+                                    <input type="file" accept="image/*" id="banner-upload" hidden>
+                                    <label for="banner-upload" class="banner-upload-btn"><img src="img/upload.png"alt="upload banner"></label>
 
-                                <input type="text" id="postTitle" name="postTitle" placeholder="Enter name.." />
-
-                                <textarea id="textArea" name="textArea" cols="30" rows="10" placeholder="Write your post.."></textarea>
-
-
-                                <!-- <input type="submit" id="previewPost" onclick="handleSubmit()" /> -->
+                                    <input type="file" accept="image/*" id="image-upload" hidden>
+                                    <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+                                </div>
 
 
-                                <div id="holder">
+                                <div class="blog">
+                                    <textarea type="text" id="postTitle" class="title" name="postTitle"
+                                        placeholder="Blog title..."></textarea>
+                                    <textarea type="text" id="textArea" class="article"
+                                        placeholder="Write your post.."></textarea>
+                                </div>
+
+
+
+                                <div id="wrap">
                                     <div class="item_column ">
                                         <select class="btn2">
                                             <option value=""> selection category</option>
                                             <option value="1"> Poetry</option>
                                             <option value="2">Marketing</option>
-                                        </select><span id="output">0</span>
-
+                                        </select>
+                                        <!-- <span id="output">0</span> -->
                                     </div>
-                                    <div class="item_column ">
+                                    <div class="item_column" style="display:flex; justify-content:space-between;">
                                         <!-- <input type="submit" id="previewPost" class=" btn" onclick="handleSubmit()" /> -->
-                                        <button type="preview" id="previewPost" class=" btn2"
-                                            style="background-color: white;color: black;"
-                                            >Preview</button>
+                                        <button id="previewPost" class=" btn2"
+                                            style="background-color: white;color: black;">Preview</button>
 
                                         <button type="submit" id="publishPost" class="addBtn btn">Publish</button>
+
+                                        <!-- <div class="blog-options"></div> -->
                                     </div>
                                 </div>
                             </form>
-
-                            <div class="container">
-                                {% include recent.html %}
-                            </div>
-
                         </div>
                     </div>
 
@@ -141,45 +146,17 @@
     </div>
     </div>
 
-    <script>
-        const Bar = document.getElementById("menu");
-        const main = document.getElementById("main");
-        Bar.addEventListener("click", () => {
-            return main.classList.toggle("close");
-        });
+    <script src="../static/js/dashbard.js"></script>
+    <script src="../static/js/main.js"></script>
+    <!-- <script src="../static/js/new.js"></script> -->
 
-        // tabs
-
-        function openPage(pageName, elmnt, color) {
-            // Hide all elements with class="tabcontent" by default */
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Remove the background color of all tablinks/buttons
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].style.backgroundColor = "";
-            }
-
-            // Show the specific tab content
-            document.getElementById(pageName).style.display = "block";
-
-            // Add the specific color to the button used to open the tab content
-            elmnt.style.backgroundColor = color;
-        }
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-
-    </script>
-    <script src="./static/js/main.js"></script>
+    <!-- <script src="../static/js/blogpost.js"></script> -->
     <!-- <script src="./static/js/new.js"></script> -->
-    <!-- <script src="./static/js/blogpost.js"></script> -->
-    <!-- <script src="./static/js/new.js"></script> -->
-    <script src="./static/js/makePost.js"></script>
+
+
+    <script src="../static/js/makePost.js"></script>
+    <script src="../static/js/publish.js"></script>
+
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script>
         new Chartist.Line('#traffic-chart', {
@@ -191,15 +168,6 @@
             low: 0,
             showArea: true
         });
-    </script>
-
-    <script>
-        document.querySelector("input").focus();
-        console.log(document.activeElement.tagName);
-        // → INPUT
-        document.querySelector("input").blur();
-        console.log(document.activeElement.tagName);
-         // → BODY
     </script>
 
 </body>

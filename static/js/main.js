@@ -1,4 +1,4 @@
-const menuLinks = document.querySelectorAll(".menu-link");
+// const menuLinks = document.querySelectorAll(".menu-link");
 
 
 // Get Modal
@@ -14,14 +14,14 @@ var closeModal = document.getElementsByClassName("klose");
 
 // JavaScript statement menu
 
-menuLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    menuLinks.forEach((link) => {
-      link.classList.remove("is-active");
-    });
-    link.classList.add("is-active");
-  });
-});
+// menuLinks.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     menuLinks.forEach((link) => {
+//       link.classList.remove("is-active");
+//     });
+//     link.classList.add("is-active");
+//   });
+// });
 
 
 
@@ -37,7 +37,7 @@ modalBtn.onclick = function () {
 closeModal.onclick = function () {
   modal.style.display = "none";
 
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -95,14 +95,44 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+// var btnContainer = document.getElementById("myBtnContainer");
+// var btns = btnContainer.getElementsByClassName("btn");
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function () {
+//     var current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }
+
+
+
+//  Readmore on button click
+function readMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("readMoreBtn");
+
+
+  
+
+  if (dots.style.display === "none") {
+
+    // window.location.assign("readmore.html")
+    // window.open("readmore.html");
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+
+
+
+    // window.history.back();
+
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
 }
 
 

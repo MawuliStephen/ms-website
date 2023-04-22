@@ -11,6 +11,14 @@
   /* width: 25%; */
 }
 
+.container {
+  /* width: 100%; */
+  /* padding-right: 15px; */
+  /* padding-left: 15px; */
+  margin-right: auto;
+  /* margin-left: auto; */
+}
+
 .tablink:hover {
   background-color: #777;
 }
@@ -233,16 +241,16 @@ button:hover {
 }
 
 /* Center the image and position the close button */
-/* .imgcontainer {
+.imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
-} */
+} 
 
-/* img.avatar {
+ img.avatar {
   width: 40%;
   border-radius: 50%;
-} */
+}
 
 .container1 {
   padding: 16px;
@@ -250,8 +258,8 @@ button:hover {
 
 span.psw {
   display: flex;
-  /* flex-direction: row; */
-  /* justify-content: space-around; */
+  flex-direction: row;
+  justify-content: space-around;
   float: right;
   padding-top: 16px;
 }
@@ -289,7 +297,7 @@ span.psw {
 }
 
 /* The Close Button (x) */
-.close {
+/* .close {
   position: absolute;
   right: 25px;
   top: 0;
@@ -302,6 +310,10 @@ span.psw {
 .close:focus {
   color: red;
   cursor: pointer;
+} */
+
+#more{
+  display:none;
 }
 
 /* Add Zoom Animation */
