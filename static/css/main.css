@@ -20,7 +20,11 @@
 
 }
 
-
+.liststyle {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-right: 10px;
+}
 
 html {
   font-size: 100%;
@@ -198,6 +202,17 @@ button {
   padding: 10px 25px;
   margin: 30px 10;
   border-radius: 10px;
+  /* transition: background 0.5s; */
+}
+.btn4list{
+  display: inline-block;
+  background: #4b4b4bd9;
+  /* background-color: #ADEFD1FF; */
+  /* background: transparent; */
+  color: #FFFF;
+  padding: 8px 8px;
+  /* margin: 5px 10; */
+  border-radius: 40px;
   /* transition: background 0.5s; */
 }
 
