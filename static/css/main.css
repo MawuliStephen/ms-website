@@ -610,8 +610,8 @@ h4 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 2rem;
-  margin: 0 auto;
-  max-width: 900px;
+  /* margin: 0 auto; */
+  /* max-width: 900px; */
 }
 
 
@@ -657,6 +657,11 @@ li {
   /* width: 200px; */
   padding-left: 0px;
   margin-top: 10px;
+}
+
+.hr {
+  padding:1px;
+  margin: 10px;
 }
 
 .get-social {
@@ -1011,21 +1016,61 @@ li {
 
   .type-large {
     text-align: justify;
-    line-height: 32.5px;
-    font-weight: 700;
+    /* line-height: 32.5px; */
+    /* font-weight: 700; */
   }
 
-  .type-large1 {
-    text-align: center;
-    line-height: 60px ;
-    font-weight: 700;
-    font-family: monospace;
-  }
+ 
+
+  /* sponsors */
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  /* margin-left:30%;
+  margin-right: 30%; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center ; */
+
+}
+
+
+.sponsor img {
+  aspect-ratio: 3 / 1;
+  width: 100%;
+  object-fit: contain;
+}
+
+
+
+span {
+  width: 34px;
+  height: 34px;
+}
+
+/* 
+.card-img{
+outline: none;
+width: 300px;
+height: 350px;
+z-index: -22; }*/
+
+
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
 
   .item_colum {
     flex-basis: 50%;
     flex-wrap: wrap;
-    flex-basis: 45.6666666667%;
+    /* flex-basis: 45.6666666667%; */
 
   }
 
@@ -1089,12 +1134,12 @@ li {
     /* font-weight: 800; */
   }
 
-  .type-large1 {
+  /* .type-large1 {
     text-align: center;
     line-height: 60px ;
     font-weight: 700;
     font-family: monospace;
-  }
+  } */
 
   .center-content {
     display: flex;
@@ -1121,13 +1166,13 @@ li {
     line-height: 48px;
     font-weight: 650;
   }
-  .type-large1 {
+  /* .type-large1 {
     font-size: 50px;
     text-align: center;
     line-height: 100px ;
     font-weight: 900;
     font-family: monospace;
-  }
+  } */
 
   .text-decor {
     padding: 0px;
@@ -1169,8 +1214,8 @@ li {
   }
 
   .sponsor-grid {
-    gap: -32rem;
-    margin: 0 auto;
+    /* gap: -32rem; */
+    /* margin: 0 auto; */
     max-width: 401px;
   }
 
@@ -1214,6 +1259,8 @@ li {
   .sponsor-grid {
     gap: -32rem;
     margin: 0 auto;
-    max-width: 401px;
+    /* max-width: 401px; */
+    max-width: 750px;
+
   }
 }
